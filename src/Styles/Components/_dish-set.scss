@@ -1,0 +1,31 @@
+.dishSet {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+
+  &__titleContainer {
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+  }
+
+  &__title {
+    @include typographies(subtitle-medium);
+    text-transform: uppercase;
+  }
+
+  &__titleUnderline {
+    width: 40px;
+    height: 3px;
+    background-color: $highlight-tertiary;
+  }
+
+  &__list {
+    width: 100%;
+    list-style: none;
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+  }
+}

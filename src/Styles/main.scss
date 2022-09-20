@@ -1,0 +1,21 @@
+@import './Utils/variables';
+@import './Base/typographies';
+@import './Utils/mixins';
+@import './Utils/functions';
+@import './Utils/animations';
+@import './Base/base';
+
+@import './Components/CTA-btn';
+@import './Components/step-card';
+@import './Components/restaurant-card';
+@import './Components/dish-card';
+@import './Components/dish-set';
+
+@import './Layouts/header';
+@import './Layouts/location-section';
+@import './Layouts/introduction-section';
+@import './Layouts/steps-section';
+@import './Layouts/restaurants-section';
+@import './Layouts/footer';
+@import './Layouts/banner';
+@import './Layouts/menu';

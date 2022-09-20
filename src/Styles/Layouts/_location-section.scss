@@ -1,0 +1,23 @@
+.locationSection {
+  width: 100%;
+  height: 48px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding-top: 4px;
+  background-color: $neutral-secondary;
+
+  &__label {
+    @include typographies(btn-title);
+
+    &__container {
+      position: relative;
+    }
+  }
+
+  &__icon {
+    position: absolute;
+    left: -28px;
+    top: -2px;
+  }
+}

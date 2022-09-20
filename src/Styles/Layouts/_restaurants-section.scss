@@ -1,0 +1,19 @@
+.restaurantsSection {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    gap: 24px;
+    padding: 54px $gutter-mobile 68px;
+    background-color: $neutral-tertiary;
+
+    &__title {
+        @include typographies(title)
+    }
+
+    &__list {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 20px;
+    }
+}

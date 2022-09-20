@@ -1,0 +1,73 @@
+@mixin ellipsis($line-count) {
+  display: -webkit-box;
+  -webkit-line-clamp: $line-count;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.dishCard {
+  width: 100%;
+  display: flex;
+  background-color: $basic-white;
+  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.15);
+  border-radius: 16px;
+  overflow: hidden;
+  cursor: pointer;
+
+  &__infos {
+    width: 0;
+    flex: 1 1 0px;
+    display: flex;
+    justify-content: space-between;
+    padding: 12px;
+  }
+
+  &__textContainer {
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+  }
+
+  &__title {
+    @include typographies(card-title);
+    @include ellipsis(1);
+  }
+
+  &__body {
+    @include typographies(card-body-light);
+    @include ellipsis(1);
+  }
+
+  &__priceContainer {
+    display: flex;
+    align-items: flex-end;
+    @include typographies(card-body-bold);
+  }
+
+  &__checkContainer {
+    width: 0px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: $highlight-tertiary;
+    transition: width 400ms ease-in-out;
+    overflow: hidden;
+  }
+
+  &__check {
+    color: $basic-white;
+    font-size: 20px;
+    transition: transform 0ms 400ms;
+    transform: rotate(00deg);
+  }
+
+  &:active .dishCard__checkContainer {
+    width: 60px;
+  }
+
+  &:active .dishCard__check {
+    transform: rotate(360deg);
+    transition: transform 300ms 100ms;
+  }
+}

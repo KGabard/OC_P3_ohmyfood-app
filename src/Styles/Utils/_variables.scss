@@ -1,0 +1,15 @@
+$basic-black: black;
+$basic-white: white;
+
+$neutral-primary: #353535;
+$neutral-secondary: #EAEAEA;
+$neutral-tertiary: #F6F6F6;
+
+$highlight-primary: #9356DC;
+$highlight-secondary: #FF79DA;
+$highlight-tertiary: #99E2D0;
+
+$gradient-up: linear-gradient(0deg, $highlight-secondary 0%, $highlight-primary 70%);
+$gradient-down: linear-gradient(180deg, $highlight-secondary 0%, $highlight-primary 70%);
+
+$gutter-mobile: 20px;

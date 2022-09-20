@@ -1,0 +1,58 @@
+.stepCard {
+  width: 100%;
+  max-width: 320px;
+  height: 72px;
+  background-color: $neutral-secondary;
+  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.15);
+  border-radius: 16px;
+  @include typographies(btn-title);
+  display: flex;
+  align-items: center;
+  position: relative;
+  cursor: pointer;
+
+  &:active {
+    &::before {
+      opacity: 1;
+    }
+    .stepCard__icon {
+      color: $highlight-primary;
+    }
+  }
+
+  &::before {
+    opacity: 0;
+    content: '';
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    border-radius: 16px;
+    background-color: lighten($highlight-primary, 33%);
+  }
+
+  &__content {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+    position: relative;
+    padding-top: 3px;
+    left: -13px;
+  }
+
+  &__number {
+    width: 24px;
+    height: 24px;
+    border-radius: 50%;
+    background-color: $highlight-primary;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: $basic-white;
+  }
+
+  &__icon {
+    color: lighten($basic-black, 50%);
+  }
+}
