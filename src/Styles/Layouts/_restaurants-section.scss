@@ -17,3 +17,23 @@
         gap: 20px;
     }
 }
+
+@include tablet {
+    .restaurantsSection {
+        padding-right: $gutter-tablet;
+        padding-left: $gutter-tablet;
+        border-radius: 32px;
+
+        &__title {
+            text-align: center;
+        }
+
+        &__list {
+            display: grid;
+            grid-template-columns: repeat(2,1fr);
+            grid-template-rows: auto;
+            justify-items: center;
+            row-gap: 24px;
+        }
+    }
+}

@@ -1,0 +1,32 @@
+
+.mainSection {
+    width: 100%;
+    max-width: 1440px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  
+  @include tablet {
+    .mainSection {
+      padding: 0 $gutter-tablet;
+      margin-bottom: 48px;
+    }
+  }
+  
+  @include desktop {
+    .mainSection {
+      padding: 0 $gutter-desktop;
+      margin-bottom: 64px;
+  
+      &--homePage {
+        display: grid;
+        grid-template-rows: 2;
+        grid-template-columns: 1fr 2fr;
+        gap: 32px;
+        row-gap: 64px;
+        align-items: start;
+      }
+    }
+  }
+  

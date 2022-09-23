@@ -27,7 +27,28 @@
         cursor: pointer;
     }
 
+    &__dishSetList {
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        gap: 16px;
+    }
+
     & .CTAbtn {
         margin-top: 32px;
+    }
+}
+
+@include tablet {
+    .menu {
+        max-width: none;
+        padding-right: $gutter-tablet;
+        padding-left: $gutter-tablet;
+        border-radius: 40px;
+
+        &__dishSetList {
+            flex-direction: row;
+            gap: 24px;
+        }
     }
 }

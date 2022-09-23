@@ -1,22 +1,36 @@
 .introductionSection {
-    width: 100%;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    padding: 40px 0 56px;
-    background-color: $neutral-tertiary;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 40px 0 56px;
+  background-color: $neutral-tertiary;
 
-    &__title {
-        @include typographies(title);
-        padding: 0 48px;
-        margin-bottom: 12px;
-        text-align: center;
-    }
+  &__title {
+    @include typographies(title);
+    padding: 0 48px;
+    margin-bottom: 12px;
+    text-align: center;
+  }
 
-    &__subtitle {
-        @include typographies(subtitle-big);
-        padding: 0 24px;
-        margin-bottom: 32px;
-        text-align: center;
-    }
+  &__subtitle {
+    @include typographies(subtitle-big);
+    padding: 0 24px;
+    margin-bottom: 32px;
+    text-align: center;
+  }
+}
+
+@include tablet {
+  .introductionSection {
+    margin-top: 32px;
+    border-radius: 32px;
+  }
+}
+
+@include desktop {
+  .introductionSection {
+    margin-top: 48px;
+    grid-column: 1/3;
+  }
 }

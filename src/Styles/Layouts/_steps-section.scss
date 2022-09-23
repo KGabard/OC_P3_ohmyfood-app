@@ -17,3 +17,22 @@
         padding-left: 13px;
     }
 }
+
+
+@include tablet {
+    .stepsSection {
+      padding-right: 0;
+      padding-left: 0;
+
+      &__title {
+        text-align: center;
+      }
+    }
+  }
+
+  
+@include desktop {
+    .stepsSection {
+        padding-top: 54px;
+    }
+}
