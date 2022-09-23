@@ -13,6 +13,11 @@
     max-width: 400px;
     color: inherit;
     text-decoration: inherit;
+    transition: transform 200ms;
+
+    &:hover {
+      transform: scale(1.05);
+    }
   }
 
   &__photo {
@@ -28,7 +33,7 @@
     top: 12px;
     right: 12px;
     background-color: $highlight-tertiary;
-    @include typographies(label)
+    @include typographies(label);
   }
 
   &__infos {
@@ -47,16 +52,33 @@
     @include typographies(card-subtitle);
   }
 
-  &__icon {
-    position: absolute;
-    top: 24px;
-    right: 24px;
-    font-size: 24px;
+  &__likeIcon {
+    &__stroke {
+      position: absolute;
+      top: 24px;
+      right: 24px;
+      font-size: 24px;
+      opacity: 1;
+    }
+    &__bg {
+      position: absolute;
+      top: 24px;
+      right: 24px;
+      font-size: 24px;
+      color: transparent;
+    }
+    &:active .restaurantCard__likeIcon__stroke {
+      opacity: 0;
+      transition: opacity 300ms 200ms ease;
+    }
+    &:active .restaurantCard__likeIcon__bg {
+      animation: gradient-fill 300ms ease both;
+    }
   }
 
   &--new {
     .restaurantCard__newLabel {
-        display: block;
+      display: block;
     }
   }
 }

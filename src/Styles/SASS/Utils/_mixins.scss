@@ -16,3 +16,15 @@
     #{$attribute}: #{$val};
   }
 }
+
+@mixin bg-gradient($percent) {
+  background: linear-gradient(
+    0deg,
+    $highlight-secondary 0%,
+    $highlight-primary $percent * 0.7,
+    $highlight-primary $percent,
+    transparent $percent * 1.01
+  );
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}

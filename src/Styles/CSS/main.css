@@ -1,4 +1,108 @@
 @import url("https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&family=Shrikhand&display=swap");
+@-webkit-keyframes gradient-fill {
+  10% {
+    background: linear-gradient(0deg, #FF79DA 0%, #9356DC 7%, #9356DC 10%, transparent 10.1%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+  }
+  20% {
+    background: linear-gradient(0deg, #FF79DA 0%, #9356DC 14%, #9356DC 20%, transparent 20.2%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+  }
+  30% {
+    background: linear-gradient(0deg, #FF79DA 0%, #9356DC 21%, #9356DC 30%, transparent 30.3%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+  }
+  40% {
+    background: linear-gradient(0deg, #FF79DA 0%, #9356DC 28%, #9356DC 40%, transparent 40.4%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+  }
+  50% {
+    background: linear-gradient(0deg, #FF79DA 0%, #9356DC 35%, #9356DC 50%, transparent 50.5%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+  }
+  60% {
+    background: linear-gradient(0deg, #FF79DA 0%, #9356DC 42%, #9356DC 60%, transparent 60.6%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+  }
+  70% {
+    background: linear-gradient(0deg, #FF79DA 0%, #9356DC 49%, #9356DC 70%, transparent 70.7%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+  }
+  80% {
+    background: linear-gradient(0deg, #FF79DA 0%, #9356DC 56%, #9356DC 80%, transparent 80.8%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+  }
+  90% {
+    background: linear-gradient(0deg, #FF79DA 0%, #9356DC 63%, #9356DC 90%, transparent 90.9%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+  }
+  100% {
+    background: linear-gradient(0deg, #FF79DA 0%, #9356DC 70%, #9356DC 100%, transparent 101%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+  }
+}
+@keyframes gradient-fill {
+  10% {
+    background: linear-gradient(0deg, #FF79DA 0%, #9356DC 7%, #9356DC 10%, transparent 10.1%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+  }
+  20% {
+    background: linear-gradient(0deg, #FF79DA 0%, #9356DC 14%, #9356DC 20%, transparent 20.2%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+  }
+  30% {
+    background: linear-gradient(0deg, #FF79DA 0%, #9356DC 21%, #9356DC 30%, transparent 30.3%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+  }
+  40% {
+    background: linear-gradient(0deg, #FF79DA 0%, #9356DC 28%, #9356DC 40%, transparent 40.4%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+  }
+  50% {
+    background: linear-gradient(0deg, #FF79DA 0%, #9356DC 35%, #9356DC 50%, transparent 50.5%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+  }
+  60% {
+    background: linear-gradient(0deg, #FF79DA 0%, #9356DC 42%, #9356DC 60%, transparent 60.6%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+  }
+  70% {
+    background: linear-gradient(0deg, #FF79DA 0%, #9356DC 49%, #9356DC 70%, transparent 70.7%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+  }
+  80% {
+    background: linear-gradient(0deg, #FF79DA 0%, #9356DC 56%, #9356DC 80%, transparent 80.8%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+  }
+  90% {
+    background: linear-gradient(0deg, #FF79DA 0%, #9356DC 63%, #9356DC 90%, transparent 90.9%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+  }
+  100% {
+    background: linear-gradient(0deg, #FF79DA 0%, #9356DC 70%, #9356DC 100%, transparent 101%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+  }
+}
 *,
 *::after,
 *::before {
@@ -70,10 +174,10 @@ body {
   position: relative;
   cursor: pointer;
 }
-.stepCard:active::before {
+.stepCard:hover::before {
   opacity: 1;
 }
-.stepCard:active .stepCard__icon {
+.stepCard:hover .stepCard__icon {
   color: #9356DC;
 }
 .stepCard::before {
@@ -86,6 +190,7 @@ body {
   left: 0;
   border-radius: 16px;
   background-color: #ece1f9;
+  transition: opacity 300ms;
 }
 .stepCard__content {
   display: flex;
@@ -107,6 +212,7 @@ body {
 }
 .stepCard__icon {
   color: gray;
+  transition: color 300ms;
 }
 
 .restaurantCard {
@@ -124,6 +230,10 @@ body {
   max-width: 400px;
   color: inherit;
   text-decoration: inherit;
+  transition: transform 200ms;
+}
+.restaurantCard__link:hover {
+  transform: scale(1.05);
 }
 .restaurantCard__photo {
   height: 0;
@@ -159,11 +269,27 @@ body {
   font-size: 17px;
   font-weight: 300;
 }
-.restaurantCard__icon {
+.restaurantCard__likeIcon__stroke {
   position: absolute;
   top: 24px;
   right: 24px;
   font-size: 24px;
+  opacity: 1;
+}
+.restaurantCard__likeIcon__bg {
+  position: absolute;
+  top: 24px;
+  right: 24px;
+  font-size: 24px;
+  color: transparent;
+}
+.restaurantCard__likeIcon:active .restaurantCard__likeIcon__stroke {
+  opacity: 0;
+  transition: opacity 300ms 200ms ease;
+}
+.restaurantCard__likeIcon:active .restaurantCard__likeIcon__bg {
+  -webkit-animation: gradient-fill 300ms ease both;
+          animation: gradient-fill 300ms ease both;
 }
 .restaurantCard--new .restaurantCard__newLabel {
   display: block;
@@ -303,6 +429,7 @@ body {
   position: absolute;
   top: calc(50% - 11px);
   left: 24px;
+  color: inherit;
   cursor: pointer;
 }
 

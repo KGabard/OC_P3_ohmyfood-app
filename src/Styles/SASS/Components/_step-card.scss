@@ -11,7 +11,7 @@
   position: relative;
   cursor: pointer;
 
-  &:active {
+  &:hover {
     &::before {
       opacity: 1;
     }
@@ -30,6 +30,7 @@
     left: 0;
     border-radius: 16px;
     background-color: lighten($highlight-primary, 33%);
+    transition: opacity 300ms;
   }
 
   &__content {
@@ -54,5 +55,6 @@
 
   &__icon {
     color: lighten($basic-black, 50%);
+    transition: color 300ms;
   }
 }
