@@ -28,3 +28,30 @@
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
 }
+
+@mixin like-icon($size) {
+  width: $size;
+  height: $size;
+  cursor: pointer;
+  &__stroke {
+    position: absolute;
+    top: 0px;
+    right: 0px;
+    font-size: $size;
+    opacity: 1;
+  }
+  &__bg {
+    position: absolute;
+    top: 0px;
+    right: 0px;
+    font-size: $size;
+    color: transparent;
+  }
+  &:hover .likeIcon__stroke {
+    opacity: 0;
+    transition: opacity 300ms 200ms ease;
+  }
+  &:hover .likeIcon__bg {
+    animation: gradient-fill 250ms ease both;
+  }
+}

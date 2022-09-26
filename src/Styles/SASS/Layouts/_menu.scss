@@ -1,54 +1,54 @@
 .menu {
+  width: 100%;
+  max-width: 400px;
+  padding: 32px $gutter-mobile 64px;
+  border-radius: 40px 40px 0 0;
+  background-color: $neutral-tertiary;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 28px;
+  margin-top: -40px;
+
+  &__titleContainer {
     width: 100%;
-    max-width: 400px;
-    padding: 32px $gutter-mobile 64px;
-    border-radius: 40px 40px 0 0;
-    background-color: $neutral-tertiary;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding-right: 16px;
+  }
+
+  &__title {
+    @include typographies(header-medium);
+  }
+
+  & .likeIcon {
+    position: relative;
+    @include like-icon(22px);
+  }
+
+  &__dishSetList {
+    width: 100%;
     display: flex;
     flex-direction: column;
-    align-items: center;
-    gap: 28px;
-    margin-top: -40px;
+    gap: 16px;
+  }
 
-    &__titleContainer {
-        width: 100%;
-        display: flex;
-        justify-content: space-between;
-        align-items: center;
-        padding-right: 16px;
-    }
-
-    &__title {
-        @include typographies(header-medium)
-    }
-
-    &__likeIcon {
-        font-size: 22px;
-        cursor: pointer;
-    }
-
-    &__dishSetList {
-        width: 100%;
-        display: flex;
-        flex-direction: column;
-        gap: 16px;
-    }
-
-    & .CTAbtn {
-        margin-top: 32px;
-    }
+  & .CTAbtn {
+    margin-top: 32px;
+  }
 }
 
 @include tablet {
-    .menu {
-        max-width: none;
-        padding-right: $gutter-tablet;
-        padding-left: $gutter-tablet;
-        border-radius: 40px;
+  .menu {
+    max-width: none;
+    padding-right: $gutter-tablet;
+    padding-left: $gutter-tablet;
+    border-radius: 40px;
 
-        &__dishSetList {
-            flex-direction: row;
-            gap: 24px;
-        }
+    &__dishSetList {
+      flex-direction: row;
+      gap: 24px;
     }
+  }
 }

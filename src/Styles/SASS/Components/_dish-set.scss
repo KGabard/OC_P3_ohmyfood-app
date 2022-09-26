@@ -29,3 +29,13 @@
     gap: 16px;
   }
 }
+
+@for $i from 1 through 10 {
+  .dishSet:nth-child(#{$i}) {
+    @for $j from 1 through 10 {
+      & .dishSet__item:nth-child(#{$j}) {
+        animation: slide-in 600ms calc(($i - 1) * 400ms + ($j - 1) * 150ms) 1 both;
+      }
+    }
+  }
+}

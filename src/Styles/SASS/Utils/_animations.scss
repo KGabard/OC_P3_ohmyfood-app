@@ -1,44 +1,73 @@
-// @keyframes neon {
-//   0% {
-//     color: $basic-white;
-//   }
-//   95% {
-//     color: $highlight-secondary;
-//   }
-//   100% {
-//     color: $basic-white;
-//   }
-// }
-
 @keyframes gradient-fill {
-    10% {
-        @include bg-gradient(10%)
-    }
-    20% {
-        @include bg-gradient(20%)
-    }
-    30% {
-        @include bg-gradient(30%)
-    }
-    40% {
-        @include bg-gradient(40%)
-    }
-    50% {
-        @include bg-gradient(50%)
-    }
-    60% {
-        @include bg-gradient(60%)
-    }
-    70% {
-        @include bg-gradient(70%)
-    }
-    80% {
-        @include bg-gradient(80%)
-    }
-    90% {
-        @include bg-gradient(90%)
-    }
-    100% {
-        @include bg-gradient(100%)
-    }
+  10% {
+    @include bg-gradient(10%);
+  }
+  20% {
+    @include bg-gradient(20%);
+  }
+  30% {
+    @include bg-gradient(30%);
+  }
+  40% {
+    @include bg-gradient(40%);
+  }
+  50% {
+    @include bg-gradient(50%);
+  }
+  60% {
+    @include bg-gradient(60%);
+  }
+  70% {
+    @include bg-gradient(70%);
+  }
+  80% {
+    @include bg-gradient(80%);
+  }
+  90% {
+    @include bg-gradient(90%);
+  }
+  100% {
+    @include bg-gradient(100%);
+  }
+}
+
+@keyframes slide-in {
+  from {
+    opacity: 0;
+    position: relative;
+    top: 20px;
+  }
+  to {
+    opacity: 1;
+    position: relative;
+    top: 0px;
+  }
+}
+
+@keyframes spin {
+  0% {
+    transform: rotate(25deg);
+  }
+  25% {
+    transform: rotate(-25deg);
+  }
+  100% {
+    transform: rotate(360deg+25deg);
+  }
+}
+
+@keyframes fade-out {
+  0% {
+    opacity: inherit;
+  }
+  95% {
+    opacity: 0;
+    z-index: inherit;
+    display: inherit;
+  }
+  100% {
+    opacity: 0;
+    z-index: -100;
+    display: none;
+  }
 }
