@@ -1459,8 +1459,8 @@ body {
   display: flex;
   justify-content: center;
   align-items: center;
-  -webkit-animation: fade-out 500ms 1900ms both;
-          animation: fade-out 500ms 1900ms both;
+  -webkit-animation: fade-out 500ms 1900ms forwards;
+          animation: fade-out 500ms 1900ms forwards;
 }
 .loader__container {
   width: 100px;
@@ -1468,8 +1468,8 @@ body {
   border-radius: 50%;
   position: relative;
   top: -5vh;
-  -webkit-animation: fade-out 300ms 1500ms both;
-          animation: fade-out 300ms 1500ms both;
+  -webkit-animation: fade-out 300ms 1500ms forwards;
+          animation: fade-out 300ms 1500ms forwards;
 }
 
 .header {
@@ -1711,7 +1711,7 @@ body {
      object-fit: cover;
 }
 
-.menu {
+.menuSection {
   width: 100%;
   max-width: 400px;
   padding: 32px 20px 64px;
@@ -1723,64 +1723,64 @@ body {
   gap: 28px;
   margin-top: -40px;
 }
-.menu__titleContainer {
+.menuSection__titleContainer {
   width: 100%;
   display: flex;
   justify-content: space-between;
   align-items: center;
   padding-right: 16px;
 }
-.menu__title {
+.menuSection__title {
   font-family: Shrikhand, serif;
   font-size: 28px;
   line-height: 28px;
 }
-.menu .likeIcon {
+.menuSection .likeIcon {
   position: relative;
   width: 22px;
   height: 22px;
   cursor: pointer;
 }
-.menu .likeIcon__stroke {
+.menuSection .likeIcon__stroke {
   position: absolute;
   top: 0px;
   right: 0px;
   font-size: 22px;
   opacity: 1;
 }
-.menu .likeIcon__bg {
+.menuSection .likeIcon__bg {
   position: absolute;
   top: 0px;
   right: 0px;
   font-size: 22px;
   color: transparent;
 }
-.menu .likeIcon:hover .likeIcon__stroke {
+.menuSection .likeIcon:hover .likeIcon__stroke {
   opacity: 0;
   transition: opacity 300ms 200ms ease;
 }
-.menu .likeIcon:hover .likeIcon__bg {
+.menuSection .likeIcon:hover .likeIcon__bg {
   -webkit-animation: gradient-fill 250ms ease both;
           animation: gradient-fill 250ms ease both;
 }
-.menu__dishSetList {
+.menuSection__dishSetList {
   width: 100%;
   display: flex;
   flex-direction: column;
   gap: 16px;
 }
-.menu .CTAbtn {
+.menuSection .CTAbtn {
   margin-top: 32px;
 }
 
 @media screen and (min-width: 768px) {
-  .menu {
+  .menuSection {
     max-width: none;
     padding-right: 32px;
     padding-left: 32px;
     border-radius: 40px;
   }
-  .menu__dishSetList {
+  .menuSection__dishSetList {
     flex-direction: row;
     gap: 24px;
   }

@@ -1,4 +1,4 @@
-.menu {
+.menuSection {
   width: 100%;
   max-width: 400px;
   padding: 32px $gutter-mobile 64px;
@@ -40,7 +40,7 @@
 }
 
 @include tablet {
-  .menu {
+  .menuSection {
     max-width: none;
     padding-right: $gutter-tablet;
     padding-left: $gutter-tablet;

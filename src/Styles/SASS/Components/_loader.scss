@@ -8,7 +8,7 @@ $loader-size: 100px;
   border-radius: 50%;
   animation: spin $anim-duration 10 ease both;
   perspective: 1px;
-  transform-origin: center $loader-size*0.5;
+  transform-origin: center $loader-size * 0.5;
   position: absolute;
 
   @for $n from 1 through 50 {
@@ -39,7 +39,7 @@ $loader-size: 100px;
     display: flex;
     justify-content: center;
     align-items: center;
-    animation: fade-out 500ms 1900ms both;
+    animation: fade-out 500ms 1900ms forwards;
   }
 
   &__container {
@@ -48,6 +48,6 @@ $loader-size: 100px;
     border-radius: 50%;
     position: relative;
     top: -5vh;
-    animation: fade-out 300ms 1500ms both;
+    animation: fade-out 300ms 1500ms forwards;
   }
 }
