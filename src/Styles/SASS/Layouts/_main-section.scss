@@ -21,7 +21,7 @@
   
       &--homePage {
         display: grid;
-        grid-template-rows: 2;
+        grid-template-rows: repeat(2, auto);
         grid-template-columns: 1fr 2fr;
         gap: 32px;
         row-gap: 64px;
