@@ -61,12 +61,25 @@
     transform: rotate(0deg);
   }
 
-  &:active .dishCard__checkContainer {
+  &:active &__checkContainer {
     width: 60px;
   }
 
-  &:active .dishCard__check {
+  &:active &__check {
     transform: rotate(360deg);
     transition: transform 300ms 100ms;
+  }
+}
+
+@include desktop {
+  .dishCard {
+    &:hover &__checkContainer {
+      width: 60px;
+    }
+
+    &:hover &__check {
+      transform: rotate(360deg);
+      transition: transform 300ms 100ms;
+    }
   }
 }

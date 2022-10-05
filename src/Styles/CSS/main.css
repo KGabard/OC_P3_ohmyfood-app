@@ -449,6 +449,15 @@ body {
   transition: transform 300ms 100ms;
 }
 
+@media screen and (min-width: 992px) {
+  .dishCard:hover .dishCard__checkContainer {
+    width: 60px;
+  }
+  .dishCard:hover .dishCard__check {
+    transform: rotate(360deg);
+    transition: transform 300ms 100ms;
+  }
+}
 .dishSet {
   width: 100%;
   display: flex;
